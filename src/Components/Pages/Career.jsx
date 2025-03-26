@@ -1,12 +1,22 @@
 import React from 'react';
 import Footer from '../Footer';
+import CareerPage from './CareerPage';
+import { Link } from 'react-router-dom';
+import { FaHome } from 'react-icons/fa';
 
 const Career = () => {
   return (
     <div>
-      <h1>Career</h1>
+      
       <img src="assets/Careers.png" alt="Career" width="100%"  height="100%" />
-      <p>Content for Career page.</p>
+      <div className="header">
+        <Link to="/" className="home-link">
+          <FaHome className="header-icon" />
+        </Link>
+        <span className="header-text">BIHER - (Alumni)</span>
+      </div>
+      
+      <CareerPage />
       <Footer />  
     </div>
   );

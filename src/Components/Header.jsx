@@ -9,7 +9,7 @@ const Header = () => {
       <Link to="/" className="home-link">
         <FaHome className="header-icon" />
       </Link>
-      <span className="header-text">Learning Management System (LMS)</span>
+      <span className="header-text">BIHER - (Alumni)</span>
     </div>
   );
 };

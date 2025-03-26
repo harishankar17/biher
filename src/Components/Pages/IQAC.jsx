@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Footer from '../Footer';
 import { FaHome } from "react-icons/fa";
 import './IQAC.css';
+import VisionMission from './VisionMission';
 
 const IQAC = () => {
   return (
@@ -15,9 +16,13 @@ const IQAC = () => {
         <span className="header-text">BIHER - (IQAC)</span>
       </div> 
       <div>
-        <img src="assets/transparent-back-2.png" alt="IQAC" width="100%" height="100%" />
+        
+        
+        <VisionMission/>
+        <Footer />
+        
       </div>
-      <Footer />
+    
     </div>
   );
 };

@@ -9,8 +9,8 @@ const Footer = () => {
           <ul>
             <li><a href="https://sbmch.ac.in" target="_blank" rel="noopener noreferrer">Sree Balaji Medical College & Hospital</a></li>
             <li><a href="https://slims.ac.in/" target="_blank" rel="noopener noreferrer">Sri Lakshmi Narayana Institute of Medical Sciences</a></li>
-            <li><a href="https://bhaarathmedicalcollege.com" target="_blank" rel="noopener noreferrer">Bhaaarth Medical College and Hospital</a></li>
-            <li><a href="https://bhaarathcollegeofnursing.com" target="_blank" rel="noopener noreferrer">Bhaaarth College of Nursing</a></li>
+            <li><a href="https://bharathmedicalcollege.com" target="_blank" rel="noopener noreferrer">Bharath Medical College and Hospital</a></li>
+            <li><a href="https://bharathcollegeofnursing.com" target="_blank" rel="noopener noreferrer">Bharath College of Nursing</a></li>
             <li><a href="https://sbdch.ac.in" target="_blank" rel="noopener noreferrer">Sree Balaji Dental College and Hospital</a></li>
             <li><a href="https://sbcn.ac.in" target="_blank" rel="noopener noreferrer">Sree Balaji College of Nursing</a></li>
             <li><a href="https://sbcp.ac.in" target="_blank" rel="noopener noreferrer">Sree Balaji College of Physiotherapy</a></li>
@@ -46,6 +46,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      <hr></hr>
       <div className="footer-bottom">
         <p>Terms and Conditions for Online Payment</p>
         <div className="social-media">
@@ -54,6 +55,7 @@ const Footer = () => {
           <a href="#"><i className="fab fa-instagram"></i></a>
           <a href="#"><i className="fab fa-youtube"></i></a>
         </div>
+        
         <p>© Copyrights 2025, BIHER All rights reserved</p>
       </div>
     </footer>

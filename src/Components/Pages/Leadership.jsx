@@ -1,6 +1,8 @@
 import React from 'react';
 import './Leadership.css';
 import FounderImg from '../../assets/Founder.png';
+import DirectorPage from './DirectorPage';
+import Footer from '../Footer';
 
 const Leadership = () => {
   return (
@@ -26,7 +28,16 @@ const Leadership = () => {
         
         <button className="admission-button">2025 Admission Open for UG/PG</button>
       </div>
+      <DirectorPage /> 
+      <>
+      <Footer />
+      
+      </> 
+      
     </div>
+    
+ 
+    
   );
 };
 

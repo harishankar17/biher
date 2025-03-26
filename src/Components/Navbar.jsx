@@ -2,11 +2,20 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Dropdown from "./DropDown";
-import { FaCertificate, FaFileContract, FaGraduationCap, FaUsers, FaBriefcase, FaSignInAlt, FaSearch, FaTrophy, FaUser, FaUserTie } from "react-icons/fa";
+import { 
+  FaCertificate, FaFileContract, FaGraduationCap, FaUsers, 
+  FaBriefcase, FaSearch, FaTrophy, FaUser, FaUserTie, FaCheckCircle
+} from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = () => {                                       
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null); // Track the open dropdown
+
+  // Function to handle dropdown open/close
+  const handleDropdownToggle = (dropdownName) => {
+    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
+  };
 
   return (
     <nav className="navbar">
@@ -26,21 +35,54 @@ const Navbar = () => {
         <Link to="/IQAC">
           <FaUsers /> IQAC
         </Link> 
-        
         <Link to="/alumni">
           <FaUsers /> Alumni
         </Link> 
-
         <Link to="/career">
-          <FaBriefcase /> Career
+          <FaBriefcase /> Career 
         </Link>
-        <Dropdown label="NAD" options={["Option 1", "Option 2", "Option 3"]} icon={<FaUser />} /> {/* NAD dropdown */}
-        <Dropdown label="Achievement" options={["Student BiAward", "Staff Award"]} icon={<FaTrophy />} /> {/* Achievement dropdown */}
-        <Dropdown label="Login" options={["User Login", "Admin Login"]} icon={<FaUserTie />} /> {/* Login dropdown */}
+
+        {/* NAD Dropdown */}
+        <Dropdown 
+          label="NAD" 
+          options={[
+            { label: "NAD Portal", icon: <FaUser /> },
+            { label: "E-Sand Verification", icon: <FaCheckCircle /> }
+          ]}
+          icon={<FaUser />} 
+          isOpen={activeDropdown === "NAD"}
+          onToggle={() => handleDropdownToggle("NAD")}
+        />
+
+        {/* Achievement Dropdown */}
+        <Dropdown 
+          label="Achievement" 
+          options={[
+            { label: "Student BiAward", icon: <FaTrophy /> },
+            { label: "Staff Award", icon: <FaUserTie /> }
+          ]}
+          icon={<FaTrophy />} 
+          isOpen={activeDropdown === "Achievement"}
+          onToggle={() => handleDropdownToggle("Achievement")}
+        />
+
+        {/* Login Dropdown */}
+        <Dropdown 
+          label="Login" 
+          options={[
+            { label: "User Login", icon: <FaUser /> },
+            { label: "Admin Login", icon: <FaUserTie /> }
+          ]}
+          icon={<FaUserTie />} 
+          isOpen={activeDropdown === "Login"}
+          onToggle={() => handleDropdownToggle("Login")}
+        />
+
         <span className="search-icon" onClick={() => setSearchOpen(!searchOpen)}>
           <FaSearch />
         </span>
       </div>
+      
       {searchOpen && (
         <div className="search-box">
           <input type="text" placeholder="Search..." />

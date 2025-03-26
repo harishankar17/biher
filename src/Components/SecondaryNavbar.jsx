@@ -16,7 +16,7 @@ const SecondaryNavbar = () => {
         </Link>
         <div className="dropdown">
           <Link to="/about" className="dropdown-label">
-            <FaInfoCircle /> About Biher
+            <FaInfoCircle /> About 
           </Link>
           <div className="dropdown-content">
             <Link to="/about/overview">Overview</Link>
@@ -44,9 +44,11 @@ const SecondaryNavbar = () => {
             <FaFlask /> Research
           </Link>
           <div className="dropdown-content">
-            <Link to="/research/projects">Projects</Link>
-            <Link to="/research/publications">Publications</Link>
-            <Link to="/research/labs">Labs</Link>
+            <Link to="/research/admission research">Academics Research</Link>
+            <Link to="/research/publication">publication</Link>
+            <Link to="/research/FIST">FIST</Link>
+            <Link to="/research/innovation">Innovation</Link>
+            <Link to="/research/Funded researcch">Funded research</Link>
           </div>
         </div>
         <div className="dropdown">
@@ -54,9 +56,12 @@ const SecondaryNavbar = () => {
             <FaGlobe /> International
           </Link>
           <div className="dropdown-content">
-            <Link to="/international/partnerships">Partnerships</Link>
-            <Link to="/international/exchange">Exchange Programs</Link>
-            <Link to="/international/students">International Students</Link>
+            <Link to="/international/Admission">Admission</Link>
+            <Link to="/international/exchange program">Exchange Programs</Link>
+            <Link to="/international/Higherstudies">Higher Studies</Link>
+            <Link to="/international/other Activites">other Activites</Link>
+            <Link to="/international/events">Events</Link>
+            <Link to="/international/Collaboration">Collaboration</Link>
           </div>
         </div>
         <div className="dropdown">
@@ -64,9 +69,12 @@ const SecondaryNavbar = () => {
             <FaUniversity /> Campus Life
           </Link>
           <div className="dropdown-content">
-            <Link to="/campuslife/events">Events</Link>
-            <Link to="/campuslife/clubs">Clubs</Link>
-            <Link to="/campuslife/facilities">Facilities</Link>
+            <Link to="/campuslife/NCC">NCC</Link>
+            <Link to="/campuslife/NSS">NSS</Link>
+            <Link to="/campuslife/RRC">RRC</Link>
+            <Link to="/campuslife/UBA">UBA</Link>
+            <Link to="/campuslife/Library">Library</Link>
+            <Link to="/campuslife/Scholarship">Scholarship</Link>
           </div>
         </div>
       </div>

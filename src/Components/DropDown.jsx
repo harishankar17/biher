@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Dropdown.css";
-import { FaCaretDown } from "react-icons/fa";
 
-const Dropdown = ({ label = "Achievement", options = ["Staff Award", "Student Award"], icon }) => {
-  const [open, setOpen] = useState(false);
-
+const Dropdown = ({ label, options, icon, isOpen, onToggle }) => {
   return (
-    <div className="dropdown" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <a href="#" className="dropdown-label">
-        {icon} {label} <FaCaretDown />
-      </a>
-      {open && (
-        <div className="dropdown-content">
+    <div className="dropdown">
+      <button className="dropdown-button" onClick={onToggle}>
+        {icon} {label}
+      </button>
+      {isOpen && (
+        <ul className="dropdown-menu">
           {options.map((option, index) => (
-            <a key={index} href="#">{option}</a>
+            <li key={index} className="dropdown-item">
+              <span className="dropdown-icon">{option.icon}</span>
+              <span className="dropdown-text">{option.label}</span>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );
